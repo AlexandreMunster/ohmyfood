@@ -29,209 +29,502 @@ p {
     font-size: 15px;
 }
 
-/*le header*/
-header {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0px 20px 0px;
-    position: relative;
+@media (max-width:735px) {
 
-    .fa-arrow-left {
+    /*le header*/
+    header {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0px 20px 0px;
+        position: relative;
+
+        .fa-arrow-left {
+            position: absolute;
+            top: 25px;
+            left: 20px;
+            border: none;
+            background-color: transparent;
+        }
+
+        .logo {
+            width: 162px;
+            height: 44px;
+        }
+
+        .img_titre {
+            margin-top: 10px;
+            width: 100%;
+        }
+    }
+
+    /* header H1+coeur*/
+    .titre {
         position: absolute;
-        top: 25px;
-        left: 20px;
-        border: none;
-        background-color: transparent;
+        bottom: -10px;
+        background: rgba(246, 246, 246, 1);
+        width: 100%;
+        border-radius: 30px 30px 0px 0px;
+        display: flex;
+        align-items: center;
+
+        h1 {
+            font-family: "Shrikhand", serif;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin: 20px;
+        }
+
+        span {
+            position: relative;
+        }
+
+        .fa-solid {
+            position: absolute;
+            margin-left: 10px;
+            background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+            color: transparent;
+            display: inline-block;
+            background-clip: text;
+            top: -15px;
+            right: -40px;
+
+        }
+
+        .fa-regular {
+            position: absolute;
+            top: -15px;
+            right: -40px;
+            background: rgba(246, 246, 246, 1);
+
+            &:active {
+                opacity: 0;
+                transition: 0.5s ease-in-out;
+            }
+        }
+
+
     }
 
-    .logo {
-        width: 162px;
-        height: 44px;
+    /*Les entrees les plats les desserts*/
+    .entrees {
+        margin: 20px 0px 0px 20px;
+
+        h2 {
+            font-size: 16px;
+            font-weight: 300;
+            border-bottom: 3px solid rgba(153, 226, 208, 1);
+            width: 30px;
+        }
+
+        .carte_entrees {
+            /*display grid*/
+            display: grid;
+            width: 350px;
+            height: 70px;
+            margin-bottom: 10px;
+            border-radius: 15px 15px 15px 15px;
+            box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+
+            &:hover .txt {
+                grid-template-columns: 250px 40px 70px;
+                transition: all .5s ease;
+            }
+        }
+
+        .carte_entrees.slid1 {
+            animation: slideIn 1s ease-in-out forwards;
+            animation-delay: var(--delay, 0s);
+        }
+
+        .carte_entrees.slid2 {
+            animation: slideIn 1s ease-in-out forwards;
+            animation-delay: var(--delay, 0.5s);
+        }
+
+        .carte_entrees.slid3 {
+            animation: slideIn 1s ease-in-out forwards;
+            animation-delay: var(--delay, 1s);
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(500%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+
+        .txt {
+            display: grid;
+            grid-template-columns: 310px 40px 70px;
+            grid-template-rows: 30px 15px 30px;
+
+        }
+
+        h3 {
+            grid-column: 1;
+            grid-row: 1;
+            margin: 15px 0px 0px 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        p {
+            grid-column: 1;
+            grid-row: 3;
+            margin: 0px 0px 0px 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .prix {
+            grid-column: 2;
+            grid-row: 2;
+            margin: 5px 0px 0px 0px;
+        }
+
+        .fa-solid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 70px;
+            border-radius: 0px 15px 15px 0px;
+            background: rgba(153, 226, 208, 1);
+            grid-area: 3;
+            grid-column: 3;
+            grid-row: 1 / span 3;
+        }
+
+        i.fa-solid.fa-check::before {
+            color: rgba(153, 226, 208, 1);
+            background-color: white;
+            padding: 3px;
+            border-radius: 25px;
+        }
+
     }
 
-    .img_titre {
-        margin-top: 10px;
+
+    /*bouton commander*/
+    .commander {
+        display: flex;
+        justify-content: center;
+        padding: 30px 0px 0px 0px;
+
+        .a_commander {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 218px;
+            height: 50px;
+            background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+            color: white;
+            border-radius: 25px;
+        }
+
+        :hover {
+            background: linear-gradient(0deg, rgba(158, 94, 235, 1) 0%, rgba(238, 45, 253, 1) 50%);
+        }
+
+    }
+
+    /* Le footer*/
+    footer {
+        background: rgba(53, 53, 53, 1);
+        width: 100%;
+        height: 230px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+
+        .lien_footer.ohmyfood {
+            margin-top: 30px;
+            color: rgba(255, 255, 255, 1);
+            font-size: 18px;
+            font-family: "Shrikhand", serif;
+        }
+
+        .lien_footer {
+            color: white;
+            margin: 5px 0px 10px 30px;
+        }
+
+        .fa-solid {
+            margin-right: 10px;
+        }
+    }
+}
+
+@media (min-width:736px) {
+
+    html,
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow-x: hidden;
         width: 100%;
     }
-}
 
-/* header H1+coeur*/
-.titre {
-    position: absolute;
-    bottom: -10px;
-    background: rgba(246, 246, 246, 1);
-    width: 100%;
-    border-radius: 30px 30px 0px 0px;
-    display: flex;
-    align-items: center;
-
-    h1 {
-        font-family: "Shrikhand", serif;
-        font-size: 28px;
-        font-style: italic;
-        font-weight: 400;
-        margin: 20px;
+    br {
+        display: none;
     }
 
-    span {
-        position: relative;
-    }
-
-    .fa-solid {
-        position: absolute;
-        margin-left: 10px;
-        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-        color: transparent;
-        display: inline-block;
-        background-clip: text;
-        top: -15px;
-        right: -40px;
-
-    }
-
-    .fa-regular {
-        position: absolute;
-        top: -15px;
-        right: -40px;
-        background: rgba(246, 246, 246, 1);
-
-        &:active {
-            display: none;
-        }
-    }
-
-
-}
-
-/*Les entrees les plats les desserts*/
-.entrees {
-    margin: 20px 0px 0px 20px;
-
-    h2 {
-        font-size: 16px;
-        font-weight: 300;
-        border-bottom: 3px solid rgba(153, 226, 208, 1);
-        width: 30px;
-    }
-
-    .carte_entrees {
-        /*display grid*/
-        display: grid;
-        width: 350px;
-        height: 70px;
-        margin-bottom: 10px;
-        border-radius: 15px 15px 15px 15px;
-        box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
-        position: relative;
-        overflow: hidden;
-
-        &:hover .txt {
-            grid-template-columns: 250px 40px 70px;
-            transition: all .5s ease;
-        }
-
-    }
-
-    .txt {
-        display: grid;
-        grid-template-columns: 310px 40px 70px;
-        grid-template-rows: 30px 15px 30px;
-    }
-
-    h3 {
-        grid-column: 1;
-        grid-row: 1;
-        margin: 15px 0px 0px 20px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    p {
-        grid-column: 1;
-        grid-row: 3;
-        margin: 0px 0px 0px 20px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .prix {
-        grid-column: 2;
-        grid-row: 2;
-        margin: 5px 0px 0px 0px;
-    }
-
-    .fa-solid {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60px;
-        height: 70px;
-        border-radius: 0px 15px 15px 0px;
-        background: rgba(153, 226, 208, 1);
-        grid-area: 3;
-        grid-column: 3;
-        grid-row: 1 / span 3;
-    }
-
-    i.fa-solid.fa-check::before {
-        color: rgba(153, 226, 208, 1);
+    body {
         background-color: white;
-        padding: 3px;
-        border-radius: 25px;
     }
 
-}
+    /*le header*/
+    header {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0px 20px 0px;
+        position: relative;
+
+        .fa-arrow-left {
+            position: absolute;
+            top: 25px;
+            left: 20px;
+            border: none;
+            background-color: transparent;
+        }
+
+        .logo {
+            width: 162px;
+            height: 44px;
+            padding: 10px 0px 10px 0px;
+        }
+
+        .img_titre {
+            margin-top: 10px;
+            width: 100%;
+            height: 1000px;
+        }
+    }
+
+    /* header H1+coeur*/
+    .titre {
+        position: absolute;
+        bottom: -10px;
+        background: #F6F6F6;
+        width: 90%;
+        border-radius: 30px 30px 0px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-family: "Shrikhand", serif;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            margin: 20px;
+        }
+
+        span {
+            position: relative;
+        }
+
+        .fa-solid {
+            position: absolute;
+            margin-left: 10px;
+            background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+            color: transparent;
+            display: inline-block;
+            background-clip: text;
+            top: -15px;
+            right: -40px;
+
+        }
+        .fa-regular {
+            position: absolute;
+            top: -15px;
+            right: -40px;
+            background: rgba(246, 246, 246, 1);
+
+            &:active {
+                opacity: 0;
+                transition: 0.5s ease-in-out;
+            }
+        }
+    }
+    /*Les entrees les plats les desserts*/
+    .entrees {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        width: 90%;
+        background: #F6F6F6;
+
+        h2 {
+            font-size: 16px;
+            font-weight: 300;
+            border-bottom: 3px solid rgba(153, 226, 208, 1);
+            width: 30px;
+            margin-left: 30%;
+
+        }
+
+        .carte_entrees {
+            /*display grid*/
+            display: grid;
+            width: 700px;
+            height: 70px;
+            margin-bottom: 10px;
+            border-radius: 15px 15px 15px 15px;
+            box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            margin-left: 30%;
+
+            &:hover .txt {
+                grid-template-columns: 600px 40px 70px;
+                transition: all .5s ease;
+            }
+        }
+
+        .carte_entrees.slid1 {
+            animation: slideIn 1s ease-in-out forwards;
+            animation-delay: var(--delay, 0s);
+        }
+
+        .carte_entrees.slid2 {
+            animation: slideIn 1s ease-in-out forwards;
+            animation-delay: var(--delay, 0.5s);
+        }
+
+        .carte_entrees.slid3 {
+            animation: slideIn 1s ease-in-out forwards;
+            animation-delay: var(--delay, 1s);
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(500%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
 
 
-/*bouton commander*/
-.commander {
-    display: flex;
-    justify-content: center;
-    padding: 30px 0px 0px 0px;
+        .txt {
+            display: grid;
+            grid-template-columns: 660px 40px 70px;
+            grid-template-rows: 30px 15px 30px;
+            width: 400px;
+        }
 
-    .a_commander {
+        h3 {
+            grid-column: 1;
+            grid-row: 1;
+            margin: 15px 0px 0px 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        p {
+            grid-column: 1;
+            grid-row: 3;
+            margin: 0px 0px 0px 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .prix {
+            grid-column: 2;
+            grid-row: 2;
+            margin: 5px 0px 0px 0px;
+        }
+
+        .fa-solid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 70px;
+            border-radius: 0px 15px 15px 0px;
+            background: rgba(153, 226, 208, 1);
+            grid-area: 3;
+            grid-column: 3;
+            grid-row: 1 / span 3;
+        }
+
+        i.fa-solid.fa-check::before {
+            color: rgba(153, 226, 208, 1);
+            background-color: white;
+            padding: 3px;
+            border-radius: 25px;
+        }
+
+    }
+
+
+    /*bouton commander*/
+    .commander {
         display: flex;
         justify-content: center;
+        align-self: center;
+        width: 90%;
+        padding: 30px 0px 30px 70px;
+        background: #F6F6F6;
+
+        .a_commander {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 218px;
+            height: 50px;
+            background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+            color: white;
+            border-radius: 25px;
+        }
+
+        :hover {
+            background: linear-gradient(0deg, rgba(158, 94, 235, 1) 0%, rgba(238, 45, 253, 1) 50%);
+        }
+
+    }
+
+    /* Le footer*/
+    footer {
+        display: grid;
+        grid-template-columns: 31vw 170px 17vw 60px 15vw 15vw;
         align-items: center;
-        width: 218px;
-        height: 50px;
-        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-        color: white;
-        border-radius: 25px;
-    }
+        justify-items: end;
+        background: rgba(53, 53, 53, 1);
+        height: 100px;
 
-    :hover {
-        background: linear-gradient(0deg, rgba(158, 94, 235, 1) 0%, rgba(238, 45, 253, 1) 50%);
-    }
+        .lien_footer.ohmyfood {
+            order: 7;
+            color: white;
+            font-size: 18px;
+            font-family: "Shrikhand", serif;
+        }
 
-}
+        .lien_footer {
+            color: white;
+            margin-right: 0px;
+        }
 
-/* Le footer*/
-footer {
-    background: rgba(53, 53, 53, 1);
-    width: 100%;
-    height: 230px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-
-    .lien_footer.ohmyfood {
-        margin-top: 30px;
-        color: rgba(255, 255, 255, 1);
-        font-size: 18px;
-        font-family: "Shrikhand", serif;
-    }
-
-    .lien_footer {
-        color: white;
-        margin: 5px 0px 10px 30px;
-    }
-
-    .fa-solid {
-        margin-right: 10px;
+        .fa-solid {
+            margin: 0px 5px 0px 5px;
+        }
     }
 }
