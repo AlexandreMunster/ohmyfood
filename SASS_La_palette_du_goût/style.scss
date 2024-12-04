@@ -76,35 +76,36 @@ p {
             font-weight: 400;
             margin: 20px;
         }
-
-        span {
-            position: relative;
+        .svg-container {
+            display: inline-block;
+            cursor: pointer;
+            width: 0px;
+            height: 0px;
         }
 
-        .fa-solid {
+        .plein {
             position: absolute;
-            margin-left: 10px;
+            bottom: 25px;
+            right: 60px;
             background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
             color: transparent;
-            display: inline-block;
             background-clip: text;
-            top: -15px;
-            right: -40px;
-
         }
 
-        .fa-regular {
+        .vide {
             position: absolute;
-            top: -15px;
-            right: -40px;
-            background: rgba(246, 246, 246, 1);
-
-            &:active {
-                opacity: 0;
-                transition: 0.5s ease-in-out;
-            }
+            right: 60px;
+            bottom: 25px;
         }
 
+        .svg-container input[type="checkbox"] {
+            display: none;
+        }
+
+        .svg-container input[type="checkbox"]:checked+label .plein {
+            opacity: 0;
+            transition: 0.5s ease-in-out;
+        }
 
     }
 
@@ -334,33 +335,37 @@ p {
             margin: 20px;
         }
 
-        span {
-            position: relative;
+        .svg-container {
+            display: inline-block;
+            cursor: pointer;
+            width: 0px;
+            height: 0px;
         }
 
-        .fa-solid {
+        .plein {
             position: absolute;
-            margin-left: 10px;
+            bottom: 25px;
+            right: 100px;
             background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
             color: transparent;
-            display: inline-block;
             background-clip: text;
-            top: -15px;
-            right: -40px;
-
         }
 
-        .fa-regular {
+        .vide {
             position: absolute;
-            top: -15px;
-            right: -40px;
-            background: rgba(246, 246, 246, 1);
-
-            &:active {
-                opacity: 0;
-                transition: 0.5s ease-in-out;
-            }
+            right: 100px;
+            bottom: 25px;
         }
+
+        .svg-container input[type="checkbox"] {
+            display: none;
+        }
+
+        .svg-container input[type="checkbox"]:checked+label .plein {
+            opacity: 0;
+            transition: 0.5s ease-in-out;
+        }
+       
     }
 
     /*Les entrees les plats les desserts*/

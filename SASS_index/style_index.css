@@ -157,22 +157,31 @@ a {
     top: 10px;
     right: 13px;
   }
-  .restaurants .element-r button {
+  .restaurants .element-r .svg-container {
+    display: inline-block;
+    cursor: pointer;
+    width: 0px;
+    height: 0px;
+  }
+  .restaurants .element-r .plein {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     right: 10px;
-    border: none;
-    background-color: rgb(246, 246, 246);
-  }
-  .restaurants .element-r button:active {
-    opacity: 0;
-    transition: 0.5s ease-in-out;
-  }
-  .restaurants .element-r .fa-solid {
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     color: transparent;
-    display: inline-block;
     background-clip: text;
+  }
+  .restaurants .element-r .vide {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  .restaurants .element-r .svg-container input[type=checkbox] {
+    display: none;
+  }
+  .restaurants .element-r .svg-container input[type=checkbox]:checked + label .plein {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
   }
   .restaurants img {
     object-fit: cover;
@@ -361,22 +370,31 @@ a {
     top: 10px;
     right: 13px;
   }
-  .restaurants .element-r button {
+  .restaurants .element-r .svg-container {
+    display: inline-block;
+    cursor: pointer;
+    width: 0px;
+    height: 0px;
+  }
+  .restaurants .element-r .plein {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     right: 10px;
-    border: none;
-    background-color: rgb(246, 246, 246);
-  }
-  .restaurants .element-r button:active {
-    opacity: 0;
-    transition: 0.5s ease-in-out;
-  }
-  .restaurants .element-r .fa-solid {
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     color: transparent;
-    display: inline-block;
     background-clip: text;
+  }
+  .restaurants .element-r .vide {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  .restaurants .element-r .svg-container input[type=checkbox] {
+    display: none;
+  }
+  .restaurants .element-r .svg-container input[type=checkbox]:checked + label .plein {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
   }
   .restaurants img {
     object-fit: cover;
@@ -543,7 +561,7 @@ a {
   /*RESTAURANTS*/
   .restaurants {
     background: rgb(246, 246, 246);
-    height: 620px;
+    height: 700px;
   }
   .restaurants h2 {
     padding-top: 20px;
@@ -579,22 +597,31 @@ a {
     top: 10px;
     right: 13px;
   }
-  .restaurants .element-r button {
+  .restaurants .element-r .svg-container {
+    display: inline-block;
+    cursor: pointer;
+    width: 0px;
+    height: 0px;
+  }
+  .restaurants .element-r .plein {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     right: 10px;
-    border: none;
-    background-color: rgb(246, 246, 246);
-  }
-  .restaurants .element-r button:active {
-    opacity: 0;
-    transition: 0.5s ease-in-out;
-  }
-  .restaurants .element-r .fa-solid {
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     color: transparent;
-    display: inline-block;
     background-clip: text;
+  }
+  .restaurants .element-r .vide {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  .restaurants .element-r .svg-container input[type=checkbox] {
+    display: none;
+  }
+  .restaurants .element-r .svg-container input[type=checkbox]:checked + label .plein {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
   }
   .restaurants img {
     object-fit: cover;
