@@ -98,6 +98,9 @@ p {
   }
   /*Les entrees les plats les desserts*/
   .entrees {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 20px 0px 0px 20px;
   }
   .entrees h2 {
@@ -105,6 +108,10 @@ p {
     font-weight: 300;
     border-bottom: 3px solid rgb(153, 226, 208);
     width: 30px;
+    margin-right: 300px;
+  }
+  .entrees .hidden-checkbox {
+    display: none;
   }
   .entrees .carte_entrees {
     /*display grid*/
@@ -117,8 +124,12 @@ p {
     position: relative;
     overflow: hidden;
   }
-  .entrees .carte_entrees:hover .txt {
-    grid-template-columns: 250px 40px 70px;
+  .entrees .carte_entrees .txt {
+    transition: all 0.5s ease;
+  }
+  .entrees .carte_entrees input:checked + .txt {
+    background-color: rgba(153, 226, 208, 0.2);
+    grid-template-columns: 229px 60px 70px;
     transition: all 0.5s ease;
   }
   .entrees .carte_entrees.slid1 {
@@ -143,7 +154,7 @@ p {
   }
   .entrees .txt {
     display: grid;
-    grid-template-columns: 310px 40px 70px;
+    grid-template-columns: 290px 60px 70px;
     grid-template-rows: 30px 15px 30px;
   }
   .entrees h3 {
@@ -228,6 +239,9 @@ p {
   }
 }
 @media (min-width: 736px) {
+  .hidden-checkbox {
+    display: none;
+  }
   html,
   body {
     display: flex;
@@ -326,12 +340,15 @@ p {
     font-weight: 300;
     border-bottom: 3px solid rgb(153, 226, 208);
     width: 30px;
-    margin-left: 30%;
+    margin-right: 320px;
+  }
+  .entrees .hidden-checkbox {
+    display: none;
   }
   .entrees .carte_entrees {
     /*display grid*/
     display: grid;
-    width: 80%;
+    width: 350px;
     height: 70px;
     margin-bottom: 10px;
     border-radius: 15px 15px 15px 15px;
@@ -339,14 +356,17 @@ p {
     position: relative;
     overflow: hidden;
   }
-  .entrees .carte_entrees:hover .txt,
-  .entrees .carte_entrees .prix {
-    grid-template-columns: 80% 10% 10%;
+  .entrees .carte_entrees .txt {
+    transition: all 0.5s ease;
+  }
+  .entrees .carte_entrees input:checked + .txt {
+    background-color: rgba(153, 226, 208, 0.2);
+    grid-template-columns: 229px 60px 70px;
     transition: all 0.5s ease;
   }
   .entrees .txt {
     display: grid;
-    grid-template-columns: 90% 10% 10%;
+    grid-template-columns: 310px 50px 20px;
     grid-template-rows: 30px 15px 30px;
   }
   .entrees .carte_entrees.slid1 {
