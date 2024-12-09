@@ -102,7 +102,7 @@ p {
             display: none;
         }
 
-        .svg-container input[type="checkbox"]:checked+label .plein {
+        .svg-container input[type="checkbox"]:checked+.slid1 .plein {
             opacity: 0;
             transition: 0.5s ease-in-out;
         }
@@ -375,7 +375,7 @@ p {
             display: none;
         }
 
-        .svg-container input[type="checkbox"]:checked+label .plein {
+        .svg-container input[type="checkbox"]:checked+.slid1 .plein {
             opacity: 0;
             transition: 0.5s ease-in-out;
         }
