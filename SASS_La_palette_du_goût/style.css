@@ -55,6 +55,8 @@ p {
   }
   /* header H1+coeur*/
   .titre {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     bottom: -10px;
     background: rgb(246, 246, 246);
@@ -68,7 +70,7 @@ p {
     font-size: 28px;
     font-style: italic;
     font-weight: 400;
-    margin: 20px;
+    margin: 20px 60px 20px 0px;
   }
   .titre .svg-container {
     display: inline-block;
@@ -78,21 +80,22 @@ p {
   }
   .titre .plein {
     position: absolute;
-    bottom: 25px;
-    right: 60px;
+    bottom: 30%;
+    right: 10%;
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     color: transparent;
     background-clip: text;
   }
   .titre .vide {
+    background-color: #F6F6F6;
     position: absolute;
-    right: 60px;
-    bottom: 25px;
+    right: 10%;
+    bottom: 30%;
   }
   .titre .svg-container input[type=checkbox] {
     display: none;
   }
-  .titre .svg-container input[type=checkbox]:checked + .slid1 .plein {
+  .titre .svg-container input[type=checkbox]:checked + label .vide {
     opacity: 0;
     transition: 0.5s ease-in-out;
   }
@@ -280,7 +283,7 @@ p {
   header .img_titre {
     margin-top: 10px;
     width: 100%;
-    height: 1000px;
+    height: 500px;
   }
   /* header H1+coeur*/
   .titre {
@@ -298,7 +301,7 @@ p {
     font-size: 28px;
     font-style: italic;
     font-weight: 400;
-    margin: 20px;
+    margin: 20px 80px 20px 0px;
   }
   .titre .svg-container {
     display: inline-block;
@@ -308,21 +311,22 @@ p {
   }
   .titre .plein {
     position: absolute;
-    bottom: 25px;
-    right: 100px;
+    bottom: 20px;
+    right: 200px;
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     color: transparent;
     background-clip: text;
   }
   .titre .vide {
+    background-color: #F6F6F6;
     position: absolute;
-    right: 100px;
-    bottom: 25px;
+    right: 200px;
+    bottom: 20px;
   }
   .titre .svg-container input[type=checkbox] {
     display: none;
   }
-  .titre .svg-container input[type=checkbox]:checked + .slid1 .plein {
+  .titre .svg-container input[type=checkbox]:checked + label .vide {
     opacity: 0;
     transition: 0.5s ease-in-out;
   }

@@ -61,6 +61,8 @@ p {
 
     /* header H1+coeur*/
     .titre {
+        display: flex;
+        flex-direction: column;
         position: absolute;
         bottom: -10px;
         background: rgba(246, 246, 246, 1);
@@ -74,8 +76,9 @@ p {
             font-size: 28px;
             font-style: italic;
             font-weight: 400;
-            margin: 20px;
+            margin: 20px 60px 20px 0px;
         }
+
         .svg-container {
             display: inline-block;
             cursor: pointer;
@@ -85,24 +88,25 @@ p {
 
         .plein {
             position: absolute;
-            bottom: 25px;
-            right: 60px;
+            bottom: 30%;
+            right: 10%;
             background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
             color: transparent;
             background-clip: text;
         }
 
         .vide {
+            background-color: #F6F6F6;
             position: absolute;
-            right: 60px;
-            bottom: 25px;
+            right: 10%;
+            bottom: 30%;
         }
 
         .svg-container input[type="checkbox"] {
             display: none;
         }
 
-        .svg-container input[type="checkbox"]:checked+.slid1 .plein {
+        .svg-container input[type="checkbox"]:checked+label .vide {
             opacity: 0;
             transition: 0.5s ease-in-out;
         }
@@ -124,9 +128,11 @@ p {
             margin-right: 300px;
 
         }
-.hidden-checkbox {
-    display: none;
-}
+
+        .hidden-checkbox {
+            display: none;
+        }
+
         .carte_entrees {
             /*display grid*/
             display: grid;
@@ -141,8 +147,8 @@ p {
             .txt {
                 transition: all 0.5s ease;
             }
-        
-            input:checked + .txt {
+
+            input:checked+.txt {
                 background-color: rgba(153, 226, 208, 0.2);
                 grid-template-columns: 229px 60px 70px;
                 transition: all 0.5s ease;
@@ -283,6 +289,7 @@ p {
     .hidden-checkbox {
         display: none;
     }
+
     html,
     body {
         display: flex;
@@ -326,7 +333,7 @@ p {
         .img_titre {
             margin-top: 10px;
             width: 100%;
-            height: 1000px;
+            height: 500px;
         }
     }
 
@@ -346,7 +353,7 @@ p {
             font-size: 28px;
             font-style: italic;
             font-weight: 400;
-            margin: 20px;
+            margin: 20px 80px 20px 0px;
         }
 
         .svg-container {
@@ -358,28 +365,29 @@ p {
 
         .plein {
             position: absolute;
-            bottom: 25px;
-            right: 100px;
+            bottom: 20px;
+            right: 200px;
             background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
             color: transparent;
             background-clip: text;
         }
 
         .vide {
+            background-color: #F6F6F6;
             position: absolute;
-            right: 100px;
-            bottom: 25px;
+            right: 200px;
+            bottom: 20px;
         }
 
         .svg-container input[type="checkbox"] {
             display: none;
         }
 
-        .svg-container input[type="checkbox"]:checked+.slid1 .plein {
+        .svg-container input[type="checkbox"]:checked+label .vide {
             opacity: 0;
             transition: 0.5s ease-in-out;
         }
-       
+
     }
 
     /*Les entrees les plats les desserts*/
@@ -403,27 +411,28 @@ p {
         .hidden-checkbox {
             display: none;
         }
-                .carte_entrees {
-                    /*display grid*/
-                    display: grid;
-                    width: 350px;
-                    height: 70px;
-                    margin-bottom: 10px;
-                    border-radius: 15px 15px 15px 15px;
-                    box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
-                    position: relative;
-                    overflow: hidden;
-        
-                    .txt {
-                        transition: all 0.5s ease;
-                    }
-                
-                    input:checked + .txt {
-                        background-color: rgba(153, 226, 208, 0.2);
-                        grid-template-columns: 229px 60px 70px;
-                        transition: all 0.5s ease;
-                    }
-                }
+
+        .carte_entrees {
+            /*display grid*/
+            display: grid;
+            width: 350px;
+            height: 70px;
+            margin-bottom: 10px;
+            border-radius: 15px 15px 15px 15px;
+            box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+
+            .txt {
+                transition: all 0.5s ease;
+            }
+
+            input:checked+.txt {
+                background-color: rgba(153, 226, 208, 0.2);
+                grid-template-columns: 229px 60px 70px;
+                transition: all 0.5s ease;
+            }
+        }
 
         .txt {
             display: grid;
